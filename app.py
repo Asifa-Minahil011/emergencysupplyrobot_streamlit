@@ -4,9 +4,6 @@ import heapq
 import networkx as nx
 import matplotlib.pyplot as plt
 
-# ---------------------------------------------------------------
-# Graph, Use Case: Emergency Supply Robot (same graph as Task 3)
-# ---------------------------------------------------------------
 locations = {
     "Pharmacy": (0, 0),
     "Main_Corridor": (2, 1),
@@ -26,7 +23,6 @@ hospital_graph = {
 }
 
 
-# Heuristic: Euclidean distance
 def heuristic(current, goal):
     x1, y1 = locations[current]
     x2, y2 = locations[goal]
@@ -101,8 +97,7 @@ def a_star(start, goal):
     return None, None
 
 
-##########################################
-# Streamlit GUI Code
+
 
 st.set_page_config(page_title="Hospital Robot Search Visualizer", page_icon="🤖", layout="centered")
 
